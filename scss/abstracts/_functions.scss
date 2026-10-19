@@ -1,0 +1,12 @@
+// ==========================================================
+// FUNCIONES
+// ==========================================================
+@use "sass:math";
+@use "variables" as v;
+
+// Convierte píxeles a rem tomando como base $fuente-base.
+// Se usa math.div() porque dividir con / está obsoleto en Sass.
+// Ejemplo: rem(24px) -> 1.5rem
+@function rem($px) {
+  @return math.div($px, v.$fuente-base) * 1rem;
+}
