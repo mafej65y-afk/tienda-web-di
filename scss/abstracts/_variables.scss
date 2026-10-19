@@ -1,0 +1,61 @@
+// ==========================================================
+// VARIABLES — colores, tipografías, espaciados y breakpoints
+// ==========================================================
+
+// --- Colores ---
+$color-primario: #b5532d;
+$color-primario-oscuro: #8f3f20;
+$color-secundario: #5a6a3a;
+$color-secundario-oscuro: #45522c;
+$color-texto: #1f1d1a;
+$color-texto-suave: #6b645b;
+$color-texto-claro: #b8afa2;
+$color-fondo: #f6f1e9;
+$color-fondo-oscuro: #ecdcc6;
+$color-superficie: #ffffff;
+$color-borde: #e3dacb;
+$color-oferta: #b23a48;
+
+// --- Tipografías ---
+$fuente-titulos: "Fraunces", Georgia, serif;
+$fuente-texto: "Inter", system-ui, -apple-system, sans-serif;
+$fuente-base: 16px;
+$peso-normal: 400;
+$peso-medio: 500;
+$peso-negrita: 700;
+
+// --- Espaciados ---
+$espacio-xs: 0.25rem;
+$espacio-s: 0.5rem;
+$espacio-m: 1rem;
+$espacio-l: 1.5rem;
+$espacio-xl: 2.5rem;
+$espacio-xxl: 4rem;
+
+// --- Breakpoints ---
+$breakpoints: (
+  movil: 768px,
+  tablet: 1024px
+);
+
+// --- Otros ---
+$ancho-max: 1200px;
+$radio: 6px;
+$radio-grande: 12px;
+$sombra: 0 2px 8px rgba(31, 29, 26, 0.08);
+$sombra-hover: 0 10px 24px rgba(31, 29, 26, 0.14);
+$transicion: 0.2s ease;
+
+// --- Maps que se recorren con @each ---
+// Variantes de botón: (fondo, texto, fondo al pasar el ratón)
+$botones: (
+  primario: ($color-primario, $color-superficie, $color-primario-oscuro),
+  secundario: ($color-secundario, $color-superficie, $color-secundario-oscuro),
+  oscuro: ($color-texto, $color-superficie, #3a3631)
+);
+
+// Etiquetas de las tarjetas: nombre -> color de fondo
+$etiquetas: (
+  nuevo: $color-secundario,
+  oferta: $color-oferta
+);
