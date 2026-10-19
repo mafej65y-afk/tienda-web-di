@@ -74,3 +74,23 @@ textarea {
   font: inherit;
   color: inherit;
 }
+
+:focus-visible {
+  outline: 2px solid v.$color-primario;
+  outline-offset: 2px;
+}
+
+// Enlace "saltar al contenido" (solo visible al tabular)
+.salto {
+  position: absolute;
+  top: v.$espacio-s;
+  left: -9999px;
+  z-index: 100;
+  padding: v.$espacio-s v.$espacio-m;
+  background-color: v.$color-texto;
+  color: v.$color-superficie;
+
+  &:focus {
+    left: v.$espacio-s;
+  }
+}

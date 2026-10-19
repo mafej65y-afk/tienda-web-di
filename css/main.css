@@ -68,3 +68,21 @@ textarea {
   font: inherit;
   color: inherit;
 }
+
+:focus-visible {
+  outline: 2px solid #b5532d;
+  outline-offset: 2px;
+}
+
+.salto {
+  position: absolute;
+  top: 0.5rem;
+  left: -9999px;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background-color: #1f1d1a;
+  color: #ffffff;
+}
+.salto:focus {
+  left: 0.5rem;
+}
