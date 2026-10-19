@@ -1,0 +1,14 @@
+# Dependencias
+node_modules/
+
+# Mapas de código y caché de Sass
+*.css.map
+.sass-cache/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# OJO: css/main.css NO se ignora. Se sube compilado para que la web funcione sin compilar.
