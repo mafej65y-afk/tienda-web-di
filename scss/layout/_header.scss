@@ -71,3 +71,29 @@
     }
   }
 }
+
+// ----------------------------------------------------------
+// Cabecera de página: título y migas de pan de las páginas interiores
+// ----------------------------------------------------------
+.cabecera-pagina {
+  padding-block: v.$espacio-xl;
+  background-color: v.$color-superficie;
+  border-bottom: 1px solid v.$color-borde;
+
+  &__migas {
+    @include m.flex(row, flex-start, center, v.$espacio-s);
+    margin-bottom: v.$espacio-s;
+    font-size: f.rem(14px);
+    color: v.$color-texto-suave;
+
+    a:hover {
+      color: v.$color-primario;
+    }
+  }
+
+  &__texto {
+    max-width: 60ch;
+    margin-top: v.$espacio-s;
+    color: v.$color-texto-suave;
+  }
+}

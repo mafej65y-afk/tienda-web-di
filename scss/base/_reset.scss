@@ -98,3 +98,33 @@ textarea {
     left: v.$espacio-s;
   }
 }
+
+// ----------------------------------------------------------
+// Contenedor y secciones (estructura común de todas las páginas)
+// ----------------------------------------------------------
+.contenedor {
+  @include m.contenedor;
+}
+
+.seccion {
+  padding-top: v.$espacio-xxl;
+
+  &__cabecera {
+    @include m.flex(row, space-between, flex-end, v.$espacio-m);
+    flex-wrap: wrap;
+    margin-bottom: v.$espacio-l;
+  }
+
+  &__texto {
+    color: v.$color-texto-suave;
+  }
+
+  &__enlace {
+    font-weight: v.$peso-medio;
+    color: v.$color-primario;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
