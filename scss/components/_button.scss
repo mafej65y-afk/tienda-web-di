@@ -78,3 +78,43 @@
     padding: v.$espacio-l;
   }
 }
+
+// ----------------------------------------------------------
+// Selector de talla de la ficha de producto (radio oculto + caja visible)
+// ----------------------------------------------------------
+.talla {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__texto {
+    @include m.flex(row, center, center);
+    min-width: f.rem(44px);
+    height: f.rem(44px);
+    padding-inline: v.$espacio-s;
+    border: 1px solid v.$color-borde;
+    border-radius: v.$radio;
+    background-color: v.$color-superficie;
+    font-weight: v.$peso-medio;
+    cursor: pointer;
+    transition: border-color v.$transicion, background-color v.$transicion;
+
+    &:hover {
+      border-color: v.$color-texto;
+    }
+  }
+
+  &__input:checked + .talla__texto {
+    border-color: v.$color-texto;
+    background-color: v.$color-texto;
+    color: v.$color-superficie;
+  }
+
+  &__input:focus-visible + .talla__texto {
+    @include m.foco;
+  }
+}
