@@ -1,0 +1,50 @@
+// ==========================================================
+// MIXINS
+// ==========================================================
+@use "sass:map";
+@use "variables" as v;
+
+// 1. Media query "hasta" un breakpoint (por defecto, móvil: 768px).
+//    Uso: @include hasta { ... }  o  @include hasta(tablet) { ... }
+@mixin hasta($bp: movil) {
+  @media (max-width: map.get(v.$breakpoints, $bp)) {
+    @content;
+  }
+}
+
+// 2. Media query "desde" un breakpoint (a partir del píxel siguiente).
+@mixin desde($bp) {
+  @media (min-width: map.get(v.$breakpoints, $bp) + 1px) {
+    @content;
+  }
+}
+
+// 3. Flexbox con argumentos y valores por defecto.
+@mixin flex($direccion: row, $justificar: flex-start, $alinear: stretch, $hueco: 0) {
+  display: flex;
+  flex-direction: $direccion;
+  justify-content: $justificar;
+  align-items: $alinear;
+  gap: $hueco;
+}
+
+// 4. Rejilla que se adapta sola al ancho disponible.
+@mixin rejilla($minimo: 240px, $hueco: v.$espacio-l) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($minimo, 1fr));
+  gap: $hueco;
+}
+
+// 5. Contenedor centrado con ancho máximo.
+@mixin contenedor($ancho: v.$ancho-max) {
+  width: 100%;
+  max-width: $ancho;
+  margin-inline: auto;
+  padding-inline: v.$espacio-l;
+}
+
+// 6. Contorno de foco visible para accesibilidad.
+@mixin foco($color: v.$color-primario) {
+  outline: 2px solid $color;
+  outline-offset: 2px;
+}
