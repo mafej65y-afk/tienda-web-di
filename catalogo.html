@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de Hilo &amp; Trama: camisetas, sudaderas, chaquetas, pantalones, vestidos y accesorios.">
+  <title>Catálogo | Hilo &amp; Trama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a class="header__logo" href="index.html">Hilo <span>&amp;</span> Trama</a>
+      <nav class="header__nav" aria-label="Navegación principal">
+        <ul class="header__lista">
+          <li><a class="header__enlace" href="index.html">Inicio</a></li>
+          <li><a class="header__enlace header__enlace--activo" href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a class="header__enlace" href="producto.html">Destacado</a></li>
+          <li><a class="header__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="cabecera-pagina" aria-labelledby="catalogo-titulo">
+      <div class="contenedor">
+        <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+          <a href="index.html">Inicio</a>
+          <span aria-hidden="true">/</span>
+          <span>Catálogo</span>
+        </nav>
+        <h1 id="catalogo-titulo">Catálogo</h1>
+        <p class="cabecera-pagina__texto">Ocho prendas básicas de fibras naturales. Combínalas entre sí y tendrás armario para toda la temporada.</p>
+      </div>
+    </section>
+
+    <section class="seccion contenedor" aria-label="Productos">
+      <div class="rejilla">
+        <article class="card">
+          <span class="card__etiqueta card__etiqueta--nuevo">Nuevo</span>
+          <figure class="card__figura">
+            <img class="card__imagen" src="img/camiseta.svg" alt="Camiseta blanca de manga corta y cuello redondo" width="400" height="500">
+          </figure>
+          <div class="card__cuerpo">
+            <p class="card__categoria">Camisetas</p>
+            <h2 class="card__titulo"><a href="producto.html">Camiseta básica orgánica</a></h2>
+            <p class="card__descripcion">Algodón orgánico de 180 g, corte recto.</p>
+            <p class="card__precio">19,90 €</p>
+            <a class="btn btn--primario" href="producto.html">Ver producto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure class="card__figura">
+            <img class="card__imagen" src="img/sudadera.svg" alt="Sudadera verde oliva con capucha, cordones y bolsillo canguro" width="400" height="500">
+          </figure>
+          <div class="card__cuerpo">
+            <p class="card__categoria">Sudaderas</p>
+            <h2 class="card__titulo"><a href="producto.html">Sudadera Bosque</a></h2>
+            <p class="card__descripcion">Felpa perchada por dentro, muy cálida.</p>
+            <p class="card__precio">44,90 €</p>
+            <a class="btn btn--primario" href="producto.html">Ver producto</a>
+          </div>
+        </article>
+
+        <article class="card card--destacada">
+          <span class="card__etiqueta card__etiqueta--oferta">Oferta</span>
+          <figure class="card__figura">
+            <img class="card__imagen" src="img/chaqueta.svg" alt="Chaqueta vaquera azul con cuello, botones dorados y dos bolsillos en el pecho" width="400" height="500">
+          </figure>
+          <div class="card__cuerpo">
+            <p class="card__categoria">Chaquetas</p>
+            <h2 class="card__titulo"><a href="producto.html">Chaqueta vaquera clásica</a></h2>
+            <p class="card__descripcion">Denim de 12 oz con lavado medio.</p>
+            <p class="card__precio">69,90 € <span class="card__precio-anterior">89,90 €</span></p>
+            <a class="btn btn--primario" href="producto.html">Ver producto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure class="card__figura">
+            <img class="card__imagen" src="img/pantalon.svg" alt="Pantalón chino de color beige con cinturilla" width="400" height="500">
+          </figure>
+          <div class="card__cuerpo">
+            <p class="card__categoria">Pantalones</p>
+            <h2 class="card__titulo"><a href="producto.html">Pantalón chino slim</a></h2>
+            <p class="card__descripcion">Sarga de algodón con un toque elástico.</p>
+            <p class="card__precio">39,90 €</p>
+            <a class="btn btn--primario" href="producto.html">Ver producto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="card__etiqueta card__etiqueta--nuevo">Nuevo</span>
+          <figure class="card__figura">
+            <img class="card__imagen" src="img/vestido.svg" alt="Vestido largo de lino color terracota con tirantes finos y cinturón" width="400" height="500">
+          </figure>
+          <div class="card__cuerpo">
+            <p class="card__categoria">Vestidos</p>
+            <h2 class="card__titulo"><a href="producto.html">Vestido de lino Terra</a></h2>
+            <p class="card__descripcion">Lino lavado, fresco y con caída suelta.</p>
+            <p class="card__precio">54,90 €</p>
+            <a class="btn btn--primario" href="producto.html">Ver producto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure class="card__figura">
+            <img class="card__imagen" src="img/abrigo.svg" alt="Abrigo largo gris carbón de doble botonadura" width="400" height="500">
+          </figure>
+          <div class="card__cuerpo">
+            <p class="card__categoria">Abrigos</p>
+            <h2 class="card__titulo"><a href="producto.html">Abrigo de lana Invierno</a></h2>
+            <p class="card__descripcion">70 % lana merino, forro interior suave.</p>
+            <p class="card__precio">119,00 €</p>
+            <a class="btn btn--primario" href="producto.html">Ver producto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure class="card__figura">
+            <img class="card__imagen" src="img/gorra.svg" alt="Gorra de pana color mostaza con visera curva" width="400" height="500">
+          </figure>
+          <div class="card__cuerpo">
+            <p class="card__categoria">Accesorios</p>
+            <h2 class="card__titulo"><a href="producto.html">Gorra de pana</a></h2>
+            <p class="card__descripcion">Pana fina y cierre ajustable trasero.</p>
+            <p class="card__precio">17,90 €</p>
+            <a class="btn btn--primario" href="producto.html">Ver producto</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="card__etiqueta card__etiqueta--oferta">Oferta</span>
+          <figure class="card__figura">
+            <img class="card__imagen" src="img/bufanda.svg" alt="Bufanda de punto granate con flecos en los extremos" width="400" height="500">
+          </figure>
+          <div class="card__cuerpo">
+            <p class="card__categoria">Accesorios</p>
+            <h2 class="card__titulo"><a href="producto.html">Bufanda de punto</a></h2>
+            <p class="card__descripcion">Punto grueso de lana, extra larga.</p>
+            <p class="card__precio">19,90 € <span class="card__precio-anterior">24,90 €</span></p>
+            <a class="btn btn--primario" href="producto.html">Ver producto</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <section>
+        <h2 class="footer__titulo">Hilo &amp; Trama</h2>
+        <p class="footer__texto">Ropa de fibras naturales diseñada y confeccionada en talleres locales.</p>
+      </section>
+      <nav aria-label="Enlaces del pie">
+        <h2 class="footer__titulo">Tienda</h2>
+        <ul class="footer__lista">
+          <li><a class="footer__enlace" href="index.html">Inicio</a></li>
+          <li><a class="footer__enlace" href="catalogo.html">Catálogo</a></li>
+          <li><a class="footer__enlace" href="producto.html">Producto destacado</a></li>
+          <li><a class="footer__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2 class="footer__titulo">Contacto</h2>
+        <address class="footer__texto">
+          hola@hiloytrama.es<br>
+          Calle del Telar 12, Córdoba
+        </address>
+      </section>
+    </div>
+    <p class="footer__legal">© 2026 Hilo &amp; Trama. Proyecto de clase de Diseño de Interfaces.</p>
+  </footer>
+</body>
+</html>

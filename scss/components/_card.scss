@@ -125,3 +125,71 @@
     }
   }
 }
+
+// ----------------------------------------------------------
+// Ficha de producto (versión ampliada de la tarjeta)
+// ----------------------------------------------------------
+.producto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: v.$espacio-xxl;
+
+  &__figura {
+    overflow: hidden;
+    border: 1px solid v.$color-borde;
+    border-radius: v.$radio-grande;
+    background-color: v.$color-superficie;
+  }
+
+  &__imagen {
+    width: 100%;
+  }
+
+  &__info {
+    @include m.flex(column, flex-start, stretch, v.$espacio-m);
+  }
+
+  &__categoria {
+    font-size: f.rem(13px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: v.$color-texto-suave;
+  }
+
+  &__precio {
+    font-size: f.rem(28px);
+    font-weight: v.$peso-negrita;
+    color: v.$color-primario;
+  }
+
+  &__descripcion {
+    color: v.$color-texto-suave;
+  }
+
+  &__opciones {
+    border: 0;
+  }
+
+  &__leyenda {
+    margin-bottom: v.$espacio-s;
+    font-weight: v.$peso-medio;
+  }
+
+  &__tallas {
+    @include m.flex(row, flex-start, center, v.$espacio-s);
+    flex-wrap: wrap;
+  }
+
+  &__detalles {
+    padding-left: v.$espacio-l;
+    list-style: disc;
+    font-size: f.rem(15px);
+    color: v.$color-texto-suave;
+  }
+
+  @include m.hasta {
+    grid-template-columns: 1fr;
+    gap: v.$espacio-xl;
+  }
+}

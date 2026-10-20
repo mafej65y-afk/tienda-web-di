@@ -97,3 +97,53 @@
     color: v.$color-texto-suave;
   }
 }
+
+// ----------------------------------------------------------
+// Hero de la página de inicio
+// ----------------------------------------------------------
+.hero {
+  padding-block: v.$espacio-xxl;
+  background: linear-gradient(135deg, v.$color-fondo 0%, v.$color-fondo-oscuro 100%);
+
+  &__contenedor {
+    @include m.contenedor;
+    @include m.flex(column, center, flex-start, v.$espacio-l);
+    min-height: f.rem(380px);
+  }
+
+  &__antetitulo {
+    font-size: f.rem(13px);
+    font-weight: v.$peso-negrita;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: v.$color-primario;
+  }
+
+  &__titulo {
+    max-width: 16ch;
+    font-size: f.rem(56px);
+  }
+
+  &__texto {
+    max-width: 48ch;
+    font-size: f.rem(18px);
+    color: v.$color-texto-suave;
+  }
+
+  &__acciones {
+    @include m.flex(row, flex-start, center, v.$espacio-m);
+    flex-wrap: wrap;
+  }
+
+  @include m.hasta {
+    padding-block: v.$espacio-xl;
+
+    &__contenedor {
+      min-height: auto;
+    }
+
+    &__titulo {
+      font-size: f.rem(36px);
+    }
+  }
+}
