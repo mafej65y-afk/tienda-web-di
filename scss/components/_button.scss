@@ -1,0 +1,80 @@
+// ==========================================================
+// COMPONENTE: BOTÓN
+// ==========================================================
+@use "sass:list";
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: v.$espacio-s;
+  padding: v.$espacio-s v.$espacio-l;
+  border: 2px solid transparent;
+  border-radius: v.$radio;
+  font-size: f.rem(15px);
+  font-weight: v.$peso-medio;
+  cursor: pointer;
+  transition: background-color v.$transicion, color v.$transicion, border-color v.$transicion;
+
+  // Variantes de color generadas recorriendo el map $botones
+  @each $nombre, $colores in v.$botones {
+    &--#{$nombre} {
+      background-color: list.nth($colores, 1);
+      color: list.nth($colores, 2);
+
+      &:hover {
+        background-color: list.nth($colores, 3);
+      }
+    }
+  }
+
+  &--contorno {
+    background-color: transparent;
+    border-color: v.$color-texto;
+    color: v.$color-texto;
+
+    &:hover {
+      background-color: v.$color-texto;
+      color: v.$color-superficie;
+    }
+  }
+
+  &--grande {
+    padding: v.$espacio-m v.$espacio-xl;
+    font-size: f.rem(17px);
+  }
+
+  &--bloque {
+    width: 100%;
+  }
+
+  @include m.hasta {
+    padding-inline: v.$espacio-m;
+  }
+}
+
+// ==========================================================
+// BANNER PROMOCIONAL (bloque destacado con un botón de acción)
+// ==========================================================
+.banner {
+  @include m.flex(row, space-between, center, v.$espacio-l);
+  padding: v.$espacio-xl;
+  border-radius: v.$radio-grande;
+  background-color: v.$color-secundario;
+  color: v.$color-fondo;
+
+  &__titulo {
+    margin-bottom: v.$espacio-xs;
+    font-size: f.rem(28px);
+    color: v.$color-superficie;
+  }
+
+  @include m.hasta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: v.$espacio-l;
+  }
+}

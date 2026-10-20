@@ -1,6 +1,6 @@
 // ==========================================================
 // ARCHIVO PRINCIPAL — solo contiene @use
-// Compilar: npm run build
+// Compilar: Live Sass Compiler (botón "Watch Sass" de VS Code)
 // ==========================================================
 
 // Base
@@ -9,3 +9,7 @@
 // Layout
 @use "layout/header";
 @use "layout/footer";
+
+// Componentes
+@use "components/button";
+@use "components/card";
