@@ -1,0 +1,60 @@
+// ==========================================================
+// PIE DE PÁGINA
+// ==========================================================
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
+
+.footer {
+  margin-top: v.$espacio-xxl;
+  padding-block: v.$espacio-xl v.$espacio-l;
+  background-color: v.$color-texto;
+  color: v.$color-fondo;
+
+  &__contenedor {
+    @include m.contenedor;
+    @include m.rejilla(200px, v.$espacio-xl);
+  }
+
+  &__titulo {
+    margin-bottom: v.$espacio-s;
+    font-family: v.$fuente-titulos;
+    font-size: f.rem(18px);
+  }
+
+  &__texto,
+  &__enlace {
+    font-size: f.rem(14px);
+    font-style: normal;
+    color: v.$color-texto-claro;
+  }
+
+  &__enlace {
+    transition: color v.$transicion;
+
+    &:hover {
+      color: v.$color-superficie;
+    }
+  }
+
+  &__lista {
+    @include m.flex(column, flex-start, flex-start, v.$espacio-xs);
+  }
+
+  &__legal {
+    @include m.contenedor;
+    margin-top: v.$espacio-xl;
+    padding-top: v.$espacio-m;
+    border-top: 1px solid rgba(246, 241, 233, 0.15);
+    font-size: f.rem(13px);
+    color: v.$color-texto-claro;
+  }
+
+  @include m.hasta {
+    text-align: center;
+
+    &__lista {
+      align-items: center;
+    }
+  }
+}

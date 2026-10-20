@@ -1,0 +1,99 @@
+// ==========================================================
+// CABECERA Y NAVEGACIÓN
+// ==========================================================
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: v.$color-superficie;
+  border-bottom: 1px solid v.$color-borde;
+
+  &__contenedor {
+    @include m.contenedor;
+    @include m.flex(row, space-between, center, v.$espacio-l);
+    min-height: f.rem(72px);
+  }
+
+  &__logo {
+    font-family: v.$fuente-titulos;
+    font-size: f.rem(24px);
+    font-weight: v.$peso-negrita;
+
+    span {
+      color: v.$color-primario;
+    }
+  }
+
+  &__lista {
+    @include m.flex(row, flex-end, center, v.$espacio-l);
+  }
+
+  &__enlace {
+    position: relative;
+    padding-block: v.$espacio-s;
+    font-weight: v.$peso-medio;
+    color: v.$color-texto-suave;
+    transition: color v.$transicion;
+
+    &:hover,
+    &--activo {
+      color: v.$color-primario;
+    }
+
+    &--activo::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background-color: v.$color-primario;
+    }
+  }
+
+  @include m.hasta {
+    position: static;
+
+    &__contenedor {
+      flex-direction: column;
+      gap: v.$espacio-s;
+      padding-block: v.$espacio-m;
+    }
+
+    &__lista {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: v.$espacio-m;
+    }
+  }
+}
+
+// ----------------------------------------------------------
+// Cabecera de página: título y migas de pan de las páginas interiores
+// ----------------------------------------------------------
+.cabecera-pagina {
+  padding-block: v.$espacio-xl;
+  background-color: v.$color-superficie;
+  border-bottom: 1px solid v.$color-borde;
+
+  &__migas {
+    @include m.flex(row, flex-start, center, v.$espacio-s);
+    margin-bottom: v.$espacio-s;
+    font-size: f.rem(14px);
+    color: v.$color-texto-suave;
+
+    a:hover {
+      color: v.$color-primario;
+    }
+  }
+
+  &__texto {
+    max-width: 60ch;
+    margin-top: v.$espacio-s;
+    color: v.$color-texto-suave;
+  }
+}
