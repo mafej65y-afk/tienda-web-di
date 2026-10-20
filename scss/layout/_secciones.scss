@@ -1,0 +1,65 @@
+// ==========================================================
+// LAYOUT GENERAL — contenedor, secciones, rejilla y cabecera de página
+// ==========================================================
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
+
+.contenedor {
+  @include m.contenedor;
+}
+
+.seccion {
+  padding-top: v.$espacio-xxl;
+
+  &__cabecera {
+    @include m.flex(row, space-between, flex-end, v.$espacio-m);
+    flex-wrap: wrap;
+    margin-bottom: v.$espacio-l;
+  }
+
+  &__texto {
+    color: v.$color-texto-suave;
+  }
+
+  &__enlace {
+    font-weight: v.$peso-medio;
+    color: v.$color-primario;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.rejilla {
+  @include m.rejilla(240px);
+
+  @include m.hasta {
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$espacio-m;
+  }
+}
+
+.cabecera-pagina {
+  padding-block: v.$espacio-xl;
+  background-color: v.$color-superficie;
+  border-bottom: 1px solid v.$color-borde;
+
+  &__migas {
+    @include m.flex(row, flex-start, center, v.$espacio-s);
+    margin-bottom: v.$espacio-s;
+    font-size: f.rem(14px);
+    color: v.$color-texto-suave;
+
+    a:hover {
+      color: v.$color-primario;
+    }
+  }
+
+  &__texto {
+    max-width: 60ch;
+    margin-top: v.$espacio-s;
+    color: v.$color-texto-suave;
+  }
+}
