@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta con Hilo &amp; Trama: dudas sobre tallas, pedidos y cambios.">
+  <title>Contacto | Hilo &amp; Trama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="header__contenedor">
+      <a class="header__logo" href="index.html">Hilo <span>&amp;</span> Trama</a>
+      <nav class="header__nav" aria-label="Navegación principal">
+        <ul class="header__lista">
+          <li><a class="header__enlace" href="index.html">Inicio</a></li>
+          <li><a class="header__enlace" href="catalogo.html">Catálogo</a></li>
+          <li><a class="header__enlace" href="producto.html">Destacado</a></li>
+          <li><a class="header__enlace header__enlace--activo" href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="cabecera-pagina" aria-labelledby="contacto-titulo">
+      <div class="contenedor">
+        <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+          <a href="index.html">Inicio</a>
+          <span aria-hidden="true">/</span>
+          <span>Contacto</span>
+        </nav>
+        <h1 id="contacto-titulo">Contacto</h1>
+        <p class="cabecera-pagina__texto">¿Dudas con una talla, un pedido o un cambio? Escríbenos y te respondemos en menos de 24 horas laborables.</p>
+      </div>
+    </section>
+
+    <div class="seccion contenedor">
+      <div class="contacto">
+        <form class="formulario" action="#" method="post">
+          <div class="formulario__fila">
+            <div class="formulario__grupo">
+              <label class="formulario__etiqueta" for="nombre">Nombre</label>
+              <input class="formulario__campo" type="text" id="nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div class="formulario__grupo">
+              <label class="formulario__etiqueta" for="email">Correo electrónico</label>
+              <input class="formulario__campo" type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="formulario__grupo">
+            <label class="formulario__etiqueta" for="motivo">Motivo</label>
+            <select class="formulario__campo" id="motivo" name="motivo">
+              <option value="tallas">Consulta de tallas</option>
+              <option value="pedido">Estado de un pedido</option>
+              <option value="cambio">Cambio o devolución</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="formulario__grupo">
+            <label class="formulario__etiqueta" for="mensaje">Mensaje</label>
+            <textarea class="formulario__campo formulario__campo--area" id="mensaje" name="mensaje" required></textarea>
+          </div>
+
+          <label class="formulario__check">
+            <input type="checkbox" name="privacidad" required>
+            <span>He leído y acepto la política de privacidad.</span>
+          </label>
+
+          <button class="btn btn--primario btn--grande" type="submit">Enviar mensaje</button>
+        </form>
+
+        <aside class="info-contacto" aria-label="Datos de contacto">
+          <section>
+            <h2 class="info-contacto__titulo">Tienda física</h2>
+            <p class="info-contacto__texto">Calle del Telar 12<br>14001 Córdoba</p>
+          </section>
+          <section>
+            <h2 class="info-contacto__titulo">Horario</h2>
+            <p class="info-contacto__texto">Lunes a viernes: 10:00 – 14:00 y 17:00 – 20:30<br>Sábados: 10:00 – 14:00</p>
+          </section>
+          <section>
+            <h2 class="info-contacto__titulo">Correo y teléfono</h2>
+            <p class="info-contacto__texto">hola@hiloytrama.es<br>957 000 000</p>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <section>
+        <h2 class="footer__titulo">Hilo &amp; Trama</h2>
+        <p class="footer__texto">Ropa de fibras naturales diseñada y confeccionada en talleres locales.</p>
+      </section>
+      <nav aria-label="Enlaces del pie">
+        <h2 class="footer__titulo">Tienda</h2>
+        <ul class="footer__lista">
+          <li><a class="footer__enlace" href="index.html">Inicio</a></li>
+          <li><a class="footer__enlace" href="catalogo.html">Catálogo</a></li>
+          <li><a class="footer__enlace" href="producto.html">Producto destacado</a></li>
+          <li><a class="footer__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2 class="footer__titulo">Contacto</h2>
+        <address class="footer__texto">
+          hola@hiloytrama.es<br>
+          Calle del Telar 12, Córdoba
+        </address>
+      </section>
+    </div>
+    <p class="footer__legal">© 2026 Hilo &amp; Trama. Proyecto de clase de Diseño de Interfaces.</p>
+  </footer>
+</body>
+</html>

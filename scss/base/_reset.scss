@@ -128,3 +128,85 @@ textarea {
     }
   }
 }
+
+// ----------------------------------------------------------
+// Formularios y página de contacto
+// ----------------------------------------------------------
+.contacto {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  gap: v.$espacio-xxl;
+
+  @include m.hasta {
+    grid-template-columns: 1fr;
+    gap: v.$espacio-xl;
+  }
+}
+
+.formulario {
+  @include m.flex(column, flex-start, stretch, v.$espacio-l);
+  padding: v.$espacio-xl;
+  border: 1px solid v.$color-borde;
+  border-radius: v.$radio-grande;
+  background-color: v.$color-superficie;
+
+  &__fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: v.$espacio-m;
+
+    @include m.hasta {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__grupo {
+    @include m.flex(column, flex-start, stretch, v.$espacio-xs);
+  }
+
+  &__etiqueta {
+    font-size: f.rem(14px);
+    font-weight: v.$peso-medio;
+  }
+
+  &__campo {
+    padding: v.$espacio-s v.$espacio-m;
+    border: 1px solid v.$color-borde;
+    border-radius: v.$radio;
+    background-color: v.$color-fondo;
+    transition: border-color v.$transicion;
+
+    &:focus {
+      border-color: v.$color-primario;
+    }
+
+    &--area {
+      min-height: f.rem(140px);
+      resize: vertical;
+    }
+  }
+
+  &__check {
+    @include m.flex(row, flex-start, flex-start, v.$espacio-s);
+    font-size: f.rem(14px);
+    color: v.$color-texto-suave;
+  }
+
+  @include m.hasta {
+    padding: v.$espacio-l;
+  }
+}
+
+.info-contacto {
+  @include m.flex(column, flex-start, stretch, v.$espacio-l);
+
+  &__titulo {
+    margin-bottom: v.$espacio-xs;
+    font-size: f.rem(18px);
+  }
+
+  &__texto {
+    color: v.$color-texto-suave;
+  }
+}
