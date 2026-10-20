@@ -3,6 +3,7 @@
 // ==========================================================
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
 
 *,
 *::before,
@@ -42,6 +43,10 @@ h3 {
 
 h1 {
   font-size: f.rem(40px);
+
+  @include m.hasta {
+    font-size: f.rem(30px);
+  }
 }
 
 h2 {
@@ -76,8 +81,7 @@ textarea {
 }
 
 :focus-visible {
-  outline: 2px solid v.$color-primario;
-  outline-offset: 2px;
+  @include m.foco;
 }
 
 // Enlace "saltar al contenido" (solo visible al tabular)
