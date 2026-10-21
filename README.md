@@ -1,4 +1,4 @@
-   # Hilo & Trama — Tienda de ropa
+   # El Botín de la Bastilla — Tienda de objetos de la Revolución
 
    Proyecto de Diseño de Interfaces.
 
