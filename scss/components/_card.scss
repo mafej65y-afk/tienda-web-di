@@ -27,6 +27,7 @@
 
   &:hover {
     transform: translateY(-4px);
+    border-color: v.$color-primario-oscuro;
     box-shadow: v.$sombra-hover;
   }
 
@@ -191,5 +192,31 @@
   @include m.hasta {
     grid-template-columns: 1fr;
     gap: v.$espacio-xl;
+  }
+}
+
+// ----------------------------------------------------------
+// Tarjeta de ventaja (garantías de la tienda en la portada)
+// ----------------------------------------------------------
+.ventaja {
+  @include m.flex(column, flex-start, flex-start, v.$espacio-s);
+  padding: v.$espacio-l;
+  border: 1px solid v.$color-borde;
+  border-radius: v.$radio-grande;
+  background-color: v.$color-superficie;
+
+  &__icono {
+    font-size: f.rem(28px);
+    line-height: 1;
+    color: v.$color-secundario;
+  }
+
+  &__titulo {
+    font-size: f.rem(18px);
+  }
+
+  &__texto {
+    font-size: f.rem(14px);
+    color: v.$color-texto-suave;
   }
 }

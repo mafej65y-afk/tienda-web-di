@@ -24,7 +24,7 @@
     font-weight: v.$peso-negrita;
 
     span {
-      color: v.$color-primario;
+      color: v.$color-secundario;
     }
   }
 
@@ -103,12 +103,28 @@
 // ----------------------------------------------------------
 .hero {
   padding-block: v.$espacio-xxl;
-  background: linear-gradient(135deg, v.$color-fondo 0%, v.$color-fondo-oscuro 100%);
+  background:
+    radial-gradient(circle at 75% 45%, v.$color-resplandor 0%, transparent 55%),
+    linear-gradient(135deg, v.$color-fondo 0%, v.$color-fondo-oscuro 100%);
+  border-bottom: 1px solid v.$color-borde;
 
   &__contenedor {
     @include m.contenedor;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: v.$espacio-xl;
+    min-height: f.rem(420px);
+  }
+
+  &__textos {
     @include m.flex(column, center, flex-start, v.$espacio-l);
-    min-height: f.rem(380px);
+  }
+
+  &__imagen {
+    width: 100%;
+    max-width: f.rem(520px);
+    justify-self: center;
   }
 
   &__antetitulo {
@@ -116,7 +132,7 @@
     font-weight: v.$peso-negrita;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: v.$color-primario;
+    color: v.$color-secundario;
   }
 
   &__titulo {
@@ -139,7 +155,12 @@
     padding-block: v.$espacio-xl;
 
     &__contenedor {
+      grid-template-columns: 1fr;
       min-height: auto;
+    }
+
+    &__imagen {
+      max-width: f.rem(320px);
     }
 
     &__titulo {

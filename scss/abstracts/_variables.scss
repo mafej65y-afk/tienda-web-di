@@ -3,18 +3,20 @@
 // ==========================================================
 
 // --- Colores ---
-$color-primario: #b5532d;
-$color-primario-oscuro: #8f3f20;
-$color-secundario: #5a6a3a;
-$color-secundario-oscuro: #45522c;
-$color-texto: #1f1d1a;
-$color-texto-suave: #6b645b;
-$color-texto-claro: #b8afa2;
-$color-fondo: #f6f1e9;
-$color-fondo-oscuro: #ecdcc6;
-$color-superficie: #ffffff;
-$color-borde: #e3dacb;
-$color-oferta: #b23a48;
+// Paleta oscura de verdes con acentos dorados
+$color-primario: #6fcf97;          // verde menta: botones y enlaces
+$color-primario-oscuro: #4fb07a;
+$color-secundario: #d4af61;        // dorado: detalles y etiquetas
+$color-secundario-oscuro: #b8954a;
+$color-texto: #e8efe9;
+$color-texto-suave: #a3b8aa;
+$color-texto-claro: #6f8b79;
+$color-fondo: #0f1a14;             // fondo de la página
+$color-fondo-oscuro: #08110c;      // pie y zonas profundas
+$color-superficie: #16251c;        // cabecera, tarjetas y formularios
+$color-borde: #26402f;
+$color-resplandor: #1f4a33;        // brillo verde del hero y del banner
+$color-oferta: #e07a6f;
 
 // --- Tipografías ---
 $fuente-titulos: "Fraunces", Georgia, serif;
@@ -42,16 +44,16 @@ $breakpoints: (
 $ancho-max: 1200px;
 $radio: 6px;
 $radio-grande: 12px;
-$sombra: 0 2px 8px rgba(31, 29, 26, 0.08);
-$sombra-hover: 0 10px 24px rgba(31, 29, 26, 0.14);
+$sombra: 0 2px 10px rgba(0, 0, 0, 0.35);
+$sombra-hover: 0 14px 32px rgba(0, 0, 0, 0.55);
 $transicion: 0.2s ease;
 
 // --- Maps que se recorren con @each ---
 // Variantes de botón: (fondo, texto, fondo al pasar el ratón)
 $botones: (
-  primario: ($color-primario, $color-superficie, $color-primario-oscuro),
-  secundario: ($color-secundario, $color-superficie, $color-secundario-oscuro),
-  oscuro: ($color-texto, $color-superficie, #3a3631)
+  primario: ($color-primario, $color-fondo-oscuro, $color-primario-oscuro),
+  secundario: ($color-secundario, $color-fondo-oscuro, $color-secundario-oscuro),
+  oscuro: ($color-fondo-oscuro, $color-texto, #000000)
 );
 
 // Etiquetas de las tarjetas: nombre -> color de fondo

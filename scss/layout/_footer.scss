@@ -8,8 +8,9 @@
 .footer {
   margin-top: v.$espacio-xxl;
   padding-block: v.$espacio-xl v.$espacio-l;
-  background-color: v.$color-texto;
-  color: v.$color-fondo;
+  background-color: v.$color-fondo-oscuro;
+  border-top: 1px solid v.$color-borde;
+  color: v.$color-texto;
 
   &__contenedor {
     @include m.contenedor;
@@ -33,7 +34,7 @@
     transition: color v.$transicion;
 
     &:hover {
-      color: v.$color-superficie;
+      color: v.$color-primario;
     }
   }
 
@@ -45,7 +46,7 @@
     @include m.contenedor;
     margin-top: v.$espacio-xl;
     padding-top: v.$espacio-m;
-    border-top: 1px solid rgba(246, 241, 233, 0.15);
+    border-top: 1px solid v.$color-borde;
     font-size: f.rem(13px);
     color: v.$color-texto-claro;
   }

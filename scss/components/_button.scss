@@ -63,13 +63,14 @@
   @include m.flex(row, space-between, center, v.$espacio-l);
   padding: v.$espacio-xl;
   border-radius: v.$radio-grande;
-  background-color: v.$color-secundario;
-  color: v.$color-fondo;
+  border: 1px solid v.$color-borde;
+  background: linear-gradient(135deg, v.$color-resplandor 0%, v.$color-superficie 100%);
+  color: v.$color-texto-suave;
 
   &__titulo {
     margin-bottom: v.$espacio-xs;
     font-size: f.rem(28px);
-    color: v.$color-superficie;
+    color: v.$color-secundario;
   }
 
   @include m.hasta {
