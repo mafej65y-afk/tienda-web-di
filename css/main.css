@@ -402,7 +402,7 @@ textarea {
   transition: color 0.2s ease;
 }
 .footer__enlace:hover {
-  color: #6fcf97;
+  color: #d4af61;
 }
 .footer__lista {
   display: flex;
@@ -710,6 +710,7 @@ textarea {
 }
 .producto__leyenda {
   margin-bottom: 0.5rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 .producto__tallas {
