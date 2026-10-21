@@ -41,3 +41,38 @@ Usamos la extensión **Live Sass Compiler** de VS Code.
 3. Pulsar **Watch Sass** en la barra inferior. Cada vez que se guarda un `.scss`, se regenera `css/main.css`.
 
 El archivo `css/main.css` **sí se sube al repositorio**, así la web funciona al abrir `index.html` sin compilar nada.
+
+## Estructura
+
+    index.html
+    catalogo.html
+    producto.html
+    contacto.html
+    css/
+    └── main.css
+    img/
+    scss/
+    ├── main.scss              ← solo contiene @use
+    ├── abstracts/
+    │   ├── _variables.scss    ← colores, tipografías, espaciados, breakpoints y maps
+    │   ├── _mixins.scss       ← hasta, desde, flex, rejilla, contenedor, foco
+    │   └── _functions.scss    ← rem() con math.div
+    ├── base/
+    │   └── _reset.scss        ← reset, contenedor, secciones y formularios
+    ├── components/
+    │   ├── _card.scss         ← tarjeta, rejilla, ficha de producto y ventajas
+    │   └── _button.scss       ← botones, banner y selector de marco
+    └── layout/
+        ├── _header.scss       ← cabecera, cabecera de página y hero
+        └── _footer.scss
+    .gitignore
+    README.md
+
+Qué usamos de SCSS:
+
+- `@use` en todos los archivos (nada de `@import`), con espacios de nombres `v.`, `m.` y `f.`.
+- Variables de colores, espaciados, tipografías y breakpoints, todas en `_variables.scss`.
+- Anidación con `&` y nombres BEM: `.card__titulo`, `.card--destacada`, `.btn--primario`…
+- 6 mixins con argumentos; `hasta()` y `desde()` usan `@content` para las media queries.
+- Función `rem()` con `math.div()` en lugar de `/`.
+- Dos maps recorridos con `@each`: variantes de botón y etiquetas de tarjeta.
