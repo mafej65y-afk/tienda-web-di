@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cuadro firmado por Messi: camiseta enmarcada requisada en un palco de Versalles.">
-  <title>Cuadro firmado por Messi | El Botín de la Bastilla</title>
+  <meta name="description" content="Ficha de cada pieza de El Botín de la Bastilla: precio, opciones y procedencia.">
+  <title>Ficha de la pieza | El Botín de la Bastilla</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -28,54 +28,662 @@
   </header>
 
   <main id="contenido">
-    <section class="cabecera-pagina" aria-label="Ubicación">
-      <div class="contenedor">
-        <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
-          <a href="index.html">Inicio</a>
-          <span aria-hidden="true">/</span>
-          <a href="catalogo.html">Catálogo</a>
-          <span aria-hidden="true">/</span>
-          <span>Cuadro firmado por Messi</span>
-        </nav>
-      </div>
-    </section>
-
-    <article class="seccion contenedor">
-      <div class="producto">
-        <figure class="producto__figura">
-          <img class="producto__imagen" src="img/cuadro-messi.svg" alt="Marco dorado con una camiseta de rayas azul celeste y blanca, el número 10 y una firma a rotulador negro" width="400" height="500">
-        </figure>
-
-        <div class="producto__info">
-          <p class="producto__categoria">Arte · Pieza destacada</p>
-          <h1>Cuadro firmado por Messi</h1>
-          <p class="producto__precio">1.789,00 €</p>
-          <p class="producto__descripcion">Nadie sabe cómo llegó una camiseta con el número 10 a un palco de Versalles en 1789, pero los archivos del Comité de Salvación Pública la registran como «prenda celeste de origen sospechoso». Enmarcada en madera dorada y lista para colgar.</p>
-
-          <form action="#" method="post">
-            <fieldset class="producto__opciones">
-              <legend class="producto__leyenda">Elige el marco</legend>
-              <div class="producto__tallas">
-                <label class="talla"><input class="talla__input" type="radio" name="marco" value="dorado" checked><span class="talla__texto">Dorado</span></label>
-                <label class="talla"><input class="talla__input" type="radio" name="marco" value="nogal"><span class="talla__texto">Nogal</span></label>
-                <label class="talla"><input class="talla__input" type="radio" name="marco" value="negro"><span class="talla__texto">Negro</span></label>
-                <label class="talla"><input class="talla__input" type="radio" name="marco" value="sin-marco"><span class="talla__texto">Sin marco</span></label>
-              </div>
-            </fieldset>
-          </form>
-
-          <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
-
-          <h2 class="producto__leyenda">Detalles de la pieza</h2>
-          <ul class="producto__detalles">
-            <li>Medidas: 60 × 80 cm con marco</li>
-            <li>Camiseta de rayas celeste y blanca, talla M</li>
-            <li>Firma a rotulador negro, certificado de autenticidad dudosa</li>
-            <li>Procedencia: palco real de Versalles, 1789</li>
-          </ul>
+    <!-- Una ficha por pieza. Solo se ve la que indica el enlace (producto.html#corona…);
+         sin nada detrás de # se ve la ficha por defecto: el cuadro de Messi. -->
+    <div class="fichas">
+      <article class="ficha" id="cartas" aria-labelledby="titulo-cartas">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Cartas Pokémon holográficas</span>
+            </nav>
+          </div>
         </div>
-      </div>
-    </article>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/cartas.svg" alt="Tres cartas coleccionables en abanico: dos con el dorso azul y una estrella dorada, y una holográfica en el centro con una criatura de fuego" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Coleccionismo</p>
+              <h1 id="titulo-cartas">Cartas Pokémon holográficas</h1>
+              <p class="producto__precio">349,00 €</p>
+              <p class="producto__descripcion">Sobre de cartas holográficas de 1999 que alguien escondió bajo un colchón de la Conciergerie. Nadie sabe cómo llegó allí, pero las cartas siguen brillando como el primer día.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige el estado</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cartas" value="Sobre cerrado" checked><span class="talla__texto">Sobre cerrado</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cartas" value="Sobre abierto"><span class="talla__texto">Sobre abierto</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cartas" value="Carta suelta"><span class="talla__texto">Carta suelta</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Edición de 1999, primera tirada</li>
+              <li>Acabado holográfico</li>
+              <li>Funda protectora incluida</li>
+              <li>Procedencia: Conciergerie, París</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="corona" aria-labelledby="titulo-corona">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Corona de Luis XVI</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/corona.svg" alt="Corona de oro con terciopelo rojo, perlas en las puntas y piedras rojas, verdes y azules, sobre un cojín granate" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Realeza</p>
+              <h1 id="titulo-corona">Corona de Luis XVI</h1>
+              <p class="producto__precio">12.500,00 € <span class="card__precio-anterior">15.000,00 €</span></p>
+              <p class="producto__descripcion">La corona que Luis XVI dejó de necesitar en 1793. Oro macizo, terciopelo rojo y una colección de rubíes, esmeraldas y zafiros que todavía no hemos terminado de contar.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige la talla</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-corona" value="S" checked><span class="talla__texto">S</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-corona" value="M"><span class="talla__texto">M</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-corona" value="L"><span class="talla__texto">L</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-corona" value="Real"><span class="talla__texto">Real</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Oro de 18 quilates</li>
+              <li>Rubíes, esmeraldas y zafiros</li>
+              <li>Cojín de terciopelo incluido</li>
+              <li>Procedencia: Palacio de las Tullerías</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="gorro-frigio" aria-labelledby="titulo-gorro-frigio">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Gorro frigio original</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/gorro-frigio.svg" alt="Gorro frigio de lana roja con la punta doblada hacia delante y una escarapela azul, blanca y roja" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Moda</p>
+              <h1 id="titulo-gorro-frigio">Gorro frigio original</h1>
+              <p class="producto__precio">34,90 €</p>
+              <p class="producto__descripcion">El gorro rojo que se puso de moda en 1789 y no se quitó nadie hasta 1799. Lana gruesa, punta doblada y escarapela tricolor cosida a mano.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige tu talla</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-gorro-frigio" value="S" checked><span class="talla__texto">S</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-gorro-frigio" value="M"><span class="talla__texto">M</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-gorro-frigio" value="L"><span class="talla__texto">L</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-gorro-frigio" value="XL"><span class="talla__texto">XL</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>100 % lana</li>
+              <li>Escarapela tricolor cosida a mano</li>
+              <li>Lavar a mano en agua fría</li>
+              <li>Procedencia: barricadas de París</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="peluca" aria-labelledby="titulo-peluca">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Peluca empolvada de Robespierre</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/peluca.svg" alt="Peluca blanca empolvada con rizos a los lados y lazo negro, colocada sobre un busto de maniquí" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Moda</p>
+              <h1 id="titulo-peluca">Peluca empolvada de Robespierre</h1>
+              <p class="producto__precio">89,90 €</p>
+              <p class="producto__descripcion">Peluca de rizos empolvados con lazo negro, tal y como la llevaba el Incorruptible. Incluye una cajita de polvos de arroz para mantener el blanco reglamentario.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige el color</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-peluca" value="Blanco" checked><span class="talla__texto">Blanco</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-peluca" value="Gris"><span class="talla__texto">Gris</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-peluca" value="Rubio"><span class="talla__texto">Rubio</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Pelo natural rizado a mano</li>
+              <li>Lazo de seda negro</li>
+              <li>Polvos de arroz incluidos</li>
+              <li>Procedencia: casa de Robespierre</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="llave" aria-labelledby="titulo-llave">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Llave de la Bastilla</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/llave.svg" alt="Gran llave antigua de hierro con anilla redonda y una etiqueta de papel en la que pone 1789" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Historia</p>
+              <h1 id="titulo-llave">Llave de la Bastilla</h1>
+              <p class="producto__precio">245,00 €</p>
+              <p class="producto__descripcion">Una de las llaves de la fortaleza que cayó el 14 de julio de 1789. Hierro forjado, casi medio kilo de peso y una etiqueta de época con la fecha.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige la presentación</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-llave" value="Sin caja" checked><span class="talla__texto">Sin caja</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-llave" value="Caja de madera"><span class="talla__texto">Caja de madera</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-llave" value="Vitrina"><span class="talla__texto">Vitrina</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Hierro forjado a mano</li>
+              <li>Longitud: 28 cm</li>
+              <li>Etiqueta de papel original</li>
+              <li>Procedencia: Bastilla, París</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="guillotina" aria-labelledby="titulo-guillotina">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Guillotina de escritorio</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/guillotina.svg" alt="Guillotina en miniatura de madera con cuchilla plateada y un puro apoyado en la base" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Hogar</p>
+              <h1 id="titulo-guillotina">Guillotina de escritorio</h1>
+              <p class="producto__precio">59,90 €</p>
+              <p class="producto__descripcion">Réplica en miniatura de la máquina más famosa de la Revolución, reconvertida en cortapuros. Cuchilla de acero afilada y base de madera noble.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige la madera</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-guillotina" value="Nogal" checked><span class="talla__texto">Nogal</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-guillotina" value="Roble"><span class="talla__texto">Roble</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-guillotina" value="Ébano"><span class="talla__texto">Ébano</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Cuchilla de acero inoxidable</li>
+              <li>Altura: 22 cm</li>
+              <li>Solo apta para puros</li>
+              <li>Procedencia: taller de la place de Grève</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="consola" aria-labelledby="titulo-consola">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Consola portátil del Delfín</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/consola.svg" alt="Consola portátil verde con pantalla de píxeles que muestra una corona, cruceta negra y dos botones rosas" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Tecnología</p>
+              <h1 id="titulo-consola">Consola portátil del Delfín</h1>
+              <p class="producto__precio">129,00 €</p>
+              <p class="producto__descripcion">Consola portátil hallada en el cuarto de juegos del Delfín, en Versalles. Pantalla de píxeles verdes, cruceta y dos botones. Las pilas se las llevó el pueblo.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige el color</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-consola" value="Verde" checked><span class="talla__texto">Verde</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-consola" value="Crema"><span class="talla__texto">Crema</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-consola" value="Dorado"><span class="talla__texto">Dorado</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Pantalla de píxeles verdes</li>
+              <li>Cruceta y dos botones</li>
+              <li>Pilas no incluidas</li>
+              <li>Procedencia: Palacio de Versalles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="vinilo" aria-labelledby="titulo-vinilo">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Vinilo de La Marsellesa</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/vinilo.svg" alt="Disco de vinilo negro con etiqueta roja asomando de una funda azul, blanca y roja con el título La Marsellesa" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Música</p>
+              <h1 id="titulo-vinilo">Vinilo de La Marsellesa</h1>
+              <p class="producto__precio">24,90 €</p>
+              <p class="producto__descripcion">Primera edición del himno que compuso Rouget de Lisle en 1792. Funda tricolor y sonido de época, con algún que otro crujido revolucionario.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige el formato</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-vinilo" value="Vinilo" checked><span class="talla__texto">Vinilo</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-vinilo" value="Casete"><span class="talla__texto">Casete</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-vinilo" value="Partitura"><span class="talla__texto">Partitura</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>33 rpm</li>
+              <li>Funda tricolor original</li>
+              <li>Duración: 5 minutos de emoción</li>
+              <li>Procedencia: Estrasburgo, 1792</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="brioche" aria-labelledby="titulo-brioche">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Brioche de María Antonieta</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/brioche.svg" alt="Brioche dorado con forma de molde acanalado y una bolita encima, espolvoreado de azúcar sobre un plato blanco" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Gastronomía</p>
+              <h1 id="titulo-brioche">Brioche de María Antonieta</h1>
+              <p class="producto__precio">4,50 € <span class="card__precio-anterior">6,00 €</span></p>
+              <p class="producto__descripcion">El brioche que, según la leyenda, recomendó María Antonieta. Masa dorada, mantequilla de Normandía y azúcar por encima. Consumir antes de 1793.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige la cantidad</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-brioche" value="1" checked><span class="talla__texto">1</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-brioche" value="6"><span class="talla__texto">6</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-brioche" value="12"><span class="talla__texto">12</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Mantequilla de Normandía</li>
+              <li>Horneado en Versalles</li>
+              <li>Consumir preferentemente antes de 1793</li>
+              <li>Procedencia: cocinas reales</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="cuberteria" aria-labelledby="titulo-cuberteria">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Cubertería de plata de Versalles</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/cuberteria.svg" alt="Tenedor, cuchara y cuchillo de plata en vertical con remates dorados, sobre un paño verde" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Hogar</p>
+              <h1 id="titulo-cuberteria">Cubertería de plata de Versalles</h1>
+              <p class="producto__precio">640,00 €</p>
+              <p class="producto__descripcion">Tenedor, cuchara y cuchillo de plata maciza con remates dorados, rescatados del comedor real. El resto del servicio sigue desaparecido.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige el servicio</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cuberteria" value="Para 1" checked><span class="talla__texto">Para 1</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cuberteria" value="Para 6"><span class="talla__texto">Para 6</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cuberteria" value="Para 12"><span class="talla__texto">Para 12</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Plata de ley</li>
+              <li>Remates bañados en oro</li>
+              <li>Paño de terciopelo incluido</li>
+              <li>Procedencia: comedor de Versalles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="gorro-frigio-infantil" aria-labelledby="titulo-gorro-frigio-infantil">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Gorro frigio infantil</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/gorro-frigio.svg" alt="Gorro frigio rojo de talla infantil con escarapela azul, blanca y roja" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Moda</p>
+              <h1 id="titulo-gorro-frigio-infantil">Gorro frigio infantil</h1>
+              <p class="producto__precio">19,90 €</p>
+              <p class="producto__descripcion">La versión para los revolucionarios más pequeños de la casa: el mismo gorro rojo con escarapela tricolor, en lana suave que no pica.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige la talla</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-gorro-frigio-infantil" value="2-4 años" checked><span class="talla__texto">2-4 años</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-gorro-frigio-infantil" value="5-8 años"><span class="talla__texto">5-8 años</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-gorro-frigio-infantil" value="9-12 años"><span class="talla__texto">9-12 años</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Lana suave que no pica</li>
+              <li>Escarapela tricolor</li>
+              <li>Lavable a máquina</li>
+              <li>Procedencia: barricadas de París (zona infantil)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha" id="catalejo" aria-labelledby="titulo-catalejo">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Catalejo de Napoleón</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/catalejo.svg" alt="Catalejo de latón y cuero apoyado en un trípode de madera, apuntando hacia arriba" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Historia</p>
+              <h1 id="titulo-catalejo">Catalejo de Napoleón</h1>
+              <p class="producto__precio">310,00 €</p>
+              <p class="producto__descripcion">Catalejo de latón y cuero con trípode de madera. Napoleón lo usaba para vigilar el horizonte; nosotros te recomendamos usarlo solo para eso.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige el aumento</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-catalejo" value="10x" checked><span class="talla__texto">10x</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-catalejo" value="20x"><span class="talla__texto">20x</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-catalejo" value="30x"><span class="talla__texto">30x</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Latón pulido y cuero</li>
+              <li>Trípode de madera de roble</li>
+              <li>Funda de transporte incluida</li>
+              <li>Procedencia: campaña de Italia</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ficha ficha--defecto" id="cuadro-messi" aria-labelledby="titulo-cuadro-messi">
+        <div class="cabecera-pagina">
+          <div class="contenedor">
+            <nav class="cabecera-pagina__migas" aria-label="Migas de pan">
+              <a href="index.html">Inicio</a>
+              <span aria-hidden="true">/</span>
+              <a href="catalogo.html">Catálogo</a>
+              <span aria-hidden="true">/</span>
+              <span>Cuadro firmado por Messi</span>
+            </nav>
+          </div>
+        </div>
+
+        <div class="seccion contenedor">
+          <div class="producto">
+            <figure class="producto__figura">
+              <img class="producto__imagen" src="img/cuadro-messi.svg" alt="Marco dorado con una camiseta de rayas azul celeste y blanca, el número 10 y una firma a rotulador negro" width="400" height="500">
+            </figure>
+
+            <div class="producto__info">
+              <p class="producto__categoria">Arte · Pieza destacada</p>
+              <h1 id="titulo-cuadro-messi">Cuadro firmado por Messi</h1>
+              <p class="producto__precio">1.789,00 €</p>
+              <p class="producto__descripcion">Nadie sabe cómo llegó una camiseta con el número 10 a un palco de Versalles en 1789, pero los archivos del Comité de Salvación Pública la registran como «prenda celeste de origen sospechoso». Enmarcada en madera dorada y lista para colgar.</p>
+
+              <form action="#" method="post">
+                <fieldset class="producto__opciones">
+                  <legend class="producto__leyenda">Elige el marco</legend>
+                  <div class="producto__tallas">
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cuadro-messi" value="Dorado" checked><span class="talla__texto">Dorado</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cuadro-messi" value="Nogal"><span class="talla__texto">Nogal</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cuadro-messi" value="Negro"><span class="talla__texto">Negro</span></label>
+                  <label class="talla"><input class="talla__input" type="radio" name="opcion-cuadro-messi" value="Sin marco"><span class="talla__texto">Sin marco</span></label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <a class="btn btn--primario btn--grande btn--bloque" href="contacto.html">Reservar la pieza</a>
+
+              <h2 class="producto__leyenda">Detalles de la pieza</h2>
+              <ul class="producto__detalles">
+              <li>Medidas: 60 × 80 cm con marco</li>
+              <li>Camiseta de rayas celeste y blanca, talla M</li>
+              <li>Firma a rotulador negro, certificado de autenticidad dudosa</li>
+              <li>Procedencia: palco real de Versalles, 1789</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
 
     <section class="seccion contenedor" aria-labelledby="relacionados-titulo">
       <div class="seccion__cabecera">
@@ -91,10 +699,10 @@
           </figure>
           <div class="card__cuerpo">
             <p class="card__categoria">Coleccionismo</p>
-            <h3 class="card__titulo"><a href="producto.html">Cartas Pokémon holográficas</a></h3>
+            <h3 class="card__titulo"><a href="producto.html#cartas">Cartas Pokémon holográficas</a></h3>
             <p class="card__descripcion">Sobre de 1999 hallado bajo un colchón de la Conciergerie.</p>
             <p class="card__precio">349,00 €</p>
-            <a class="btn btn--primario" href="producto.html">Ver pieza</a>
+            <a class="btn btn--primario" href="producto.html#cartas">Ver pieza</a>
           </div>
         </article>
 
@@ -104,10 +712,10 @@
           </figure>
           <div class="card__cuerpo">
             <p class="card__categoria">Música</p>
-            <h3 class="card__titulo"><a href="producto.html">Vinilo de La Marsellesa</a></h3>
+            <h3 class="card__titulo"><a href="producto.html#vinilo">Vinilo de La Marsellesa</a></h3>
             <p class="card__descripcion">Primera edición de 1792 a 33 rpm. Ideal para fiestas patrias.</p>
             <p class="card__precio">24,90 €</p>
-            <a class="btn btn--primario" href="producto.html">Ver pieza</a>
+            <a class="btn btn--primario" href="producto.html#vinilo">Ver pieza</a>
           </div>
         </article>
 
@@ -117,10 +725,10 @@
           </figure>
           <div class="card__cuerpo">
             <p class="card__categoria">Tecnología</p>
-            <h3 class="card__titulo"><a href="producto.html">Consola portátil del Delfín</a></h3>
+            <h3 class="card__titulo"><a href="producto.html#consola">Consola portátil del Delfín</a></h3>
             <p class="card__descripcion">Requisada en el cuarto de juegos de Versalles. Pilas no incluidas.</p>
             <p class="card__precio">129,00 €</p>
-            <a class="btn btn--primario" href="producto.html">Ver pieza</a>
+            <a class="btn btn--primario" href="producto.html#consola">Ver pieza</a>
           </div>
         </article>
       </div>

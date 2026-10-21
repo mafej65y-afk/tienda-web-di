@@ -757,3 +757,17 @@ textarea {
   font-size: 0.875rem;
   color: #a3b8aa;
 }
+
+.ficha {
+  display: none;
+  scroll-margin-top: 5rem;
+}
+.ficha:target {
+  display: block;
+}
+.ficha--defecto {
+  display: block;
+}
+.ficha:target ~ .ficha--defecto {
+  display: none;
+}
