@@ -225,3 +225,26 @@
     color: v.$color-texto-suave;
   }
 }
+
+// ----------------------------------------------------------
+// Fichas de producto: producto.html tiene una ficha por pieza
+// y solo se muestra la que indica el enlace (#corona, #llave…)
+// ----------------------------------------------------------
+.ficha {
+  display: none;
+  scroll-margin-top: f.rem(80px); // que la cabecera fija no tape las migas
+
+  &:target {
+    display: block;
+  }
+
+  // Sin # en la dirección se ve la ficha por defecto (va la última).
+  // Si hay otra ficha elegida, la de por defecto se oculta.
+  &--defecto {
+    display: block;
+  }
+
+  &:target ~ .ficha--defecto {
+    display: none;
+  }
+}
