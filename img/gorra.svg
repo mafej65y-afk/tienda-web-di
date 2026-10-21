@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
-  <rect width="400" height="500" fill="#f4ead0"/>
-  <ellipse cx="200" cy="470" rx="150" ry="14" fill="#000" opacity="0.06"/>
-  <path d="M110 280 Q110 150 200 150 Q290 150 290 280 Z" fill="#c99a2e" opacity="1"/><path d="M100 280 L350 280 Q345 312 290 306 L100 296 Z" fill="#a87d1e" opacity="1"/><circle cx="200" cy="150" r="9" fill="#a87d1e"/><line x1="130" y1="165" x2="130" y2="278" stroke="#b38722" stroke-width="2"/><line x1="148" y1="165" x2="148" y2="278" stroke="#b38722" stroke-width="2"/><line x1="166" y1="165" x2="166" y2="278" stroke="#b38722" stroke-width="2"/><line x1="184" y1="165" x2="184" y2="278" stroke="#b38722" stroke-width="2"/><line x1="202" y1="165" x2="202" y2="278" stroke="#b38722" stroke-width="2"/><line x1="220" y1="165" x2="220" y2="278" stroke="#b38722" stroke-width="2"/><line x1="238" y1="165" x2="238" y2="278" stroke="#b38722" stroke-width="2"/><line x1="256" y1="165" x2="256" y2="278" stroke="#b38722" stroke-width="2"/><line x1="274" y1="165" x2="274" y2="278" stroke="#b38722" stroke-width="2"/>
-  
-</svg>
