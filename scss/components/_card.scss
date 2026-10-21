@@ -13,6 +13,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: v.$espacio-m;
   }
+
+  @include m.hasta(pequeno) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
