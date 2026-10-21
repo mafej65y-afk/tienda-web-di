@@ -76,3 +76,26 @@ Qué usamos de SCSS:
 - 6 mixins con argumentos; `hasta()` y `desde()` usan `@content` para las media queries.
 - Función `rem()` con `math.div()` en lugar de `/`.
 - Dos maps recorridos con `@each`: variantes de botón y etiquetas de tarjeta.
+
+## Reparto de tareas
+
+| Tarea | José Luis | Dani |
+|---|:---:|:---:|
+| Repositorio, README inicial y `.gitignore` | ✔ | |
+| Variables, función `rem()` y mixins | ✔ | |
+| Reset, cabecera y pie | ✔ | |
+| Componentes botón y tarjeta | ✔ | |
+| Las 4 páginas HTML | ✔ | |
+| Rediseño "El Botín de la Bastilla" | ✔ | |
+| README completo | | ✔ |
+| Ajustes responsive y de la ficha | | ✔ |
+| Producto nuevo en el catálogo | | ✔ |
+| Revisión de Pull Requests | ✔ | ✔ |
+
+## Prefijos de los commits
+
+Usamos `feat:`, `fix:`, `style:` y `docs:`. Algunos commits del principio usan `build:`, `chore:` o `refactor:`; a partir del rediseño solo usamos los cuatro prefijos del enunciado.
+
+## Conflicto de fusión resuelto
+
+_(Rellenar si aparece alguno.)_
